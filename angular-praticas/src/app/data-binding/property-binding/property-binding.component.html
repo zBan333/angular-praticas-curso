@@ -1,0 +1,103 @@
+<div class="container flex flex-col gap-2 mx-auto mb-5">
+  <h2 class="flex justify-start text-lg font-medium lg:text-2xl md:text-xl">
+    Interpolação e Property binding
+  </h2>
+
+  <div class="container grid w-full grid-cols-1 gap-3 mb-4 sm:grid-cols-2 lg:gap-15 md:gap-10 lg:place-items-center lg:px-20 sm:gap-5">
+
+    <div class="flex flex-col items-center gap-3 md:gap-5 lg:gap-12 lg:w-96 md:w-full">
+      <div class="w-full lg:w-96">
+        <h4 class="text-lg font-medium lg:text-xl" id="pratica-01">
+           Perfil de usuario
+        </h4>
+        <div class="flex items-center w-full h-24 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+          <img [src]='userImage' class="w-24 h-24 border-r-2 border-solid border-grayCustom-200">
+          <div class="py-0 pl-3">
+            <p class="font-medium text-wild-sand-950 lg:text-lg md:text-base">{{ userName }}</p>
+            <p class="text-sm font-medium text-wild-sand-900 lg:text-lg md:text-base">{{ userAge }} </p>
+            <p class="text-sm font-medium text-wild-sand-900 lg:text-lg md:text-base">{{ userWork }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full lg:w-96" id="pratica-02">
+        <h4 class="text-lg font-medium lg:text-xl">
+         Relogio dinamico
+        </h4>
+        <div class="flex flex-col w-full h-24 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+          <p class="flex items-center justify-center h-12 text-2xl">
+            {{ horaAtual }}
+          </p>
+          <button (click)="updateTime()" [disabled]="false"
+                  class="h-12 px-3 py-2 text-base font-medium border-none outline-none bg-grayCustom-200 ">
+            Atualizar hora
+          </button>
+        </div>
+      </div>
+      <div class="w-full lg:w-96" id="pratica-03">
+        <h4 class="text-lg font-medium lg:text-xl">
+           semaforo
+        </h4>
+        <div class="flex flex-col items-center w-full rounded-lg shadow-sm">
+          <div class="flex w-full gap-2 p-2 bg-gray-600 rounded-t-lg justify-evenly">
+            <div [style.backgroundColor]="corLampada == 'red' ? 'red' : 'gray'"
+                 class="h-12 rounded-full w-14">
+            </div>
+            <div [style.backgroundColor]="corLampada == 'yellow' ? 'yellow' : 'gray'"
+                 class="h-12 rounded-full w-14">
+            </div>
+            <div [style.backgroundColor]="corLampada == 'green' ? 'green' : 'gray'"
+                 class="h-12 rounded-full w-14">
+            </div>
+          </div>
+          <button (click)="mudarCor()"
+                  class="flex items-center justify-center w-full h-8 p-4 text-base font-medium border-none rounded-b-lg outline-none bg-grayCustom-200">
+            trocar de a cor da Lampada
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col" id="pratica-04">
+      <h4 class="text-lg font-medium lg:text-xl ">
+       Card de Produtos
+      </h4>
+
+      <div class="rounded-lg shadow-xl lg:w-96 md:w-80">
+        <div class="flex items-center justify-center w-full">
+          <img [src]="imagemProduto" class="rounded-t">
+        </div>
+        <div class="p-4">
+          <p class="text-2xl font-medium">
+            {{ nomeProduto }}
+          </p>
+          <p class="text-base font-normal text-secundary">
+            R${{ precoProduto }}
+          </p>
+          <p class="text-base font-normal text-secundary">
+            Intel I5 12400F Geforce RTX 4060 8GB
+            <br>
+            32GB ram SSD 1TB NVME H610M-G
+          </p>
+          <p class="mt-2 text-xl font-normal">
+            {{ estoqueProduto ? 'disponiveis: ' + estoqueProduto : 'indisponivel' }}
+          </p>
+
+          <div class="flex items-center justify-start gap-4 mt-4">
+            <button (click)="mudarValor()"
+                    class="flex items-center justify-center h-12 px-3 py-2 text-base font-medium transition-all duration-150 bg-transparent border-none rounded hover:bg-blue-500 hover:text-white hover:shadow-lg active:bg-blue-900 active:shadow-lg">
+              Comprar
+            </button>
+            <button (click)="mudarValor()"
+                    class="flex items-center justify-center h-12 px-3 py-2 text-base font-medium transition-all duration-150 bg-transparent border-none rounded hover:bg-blue-500 hover:text-white hover:shadow-lg active:bg-blue-900 active:shadow-lg">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+

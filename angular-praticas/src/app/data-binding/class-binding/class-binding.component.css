@@ -1,0 +1,3 @@
+.toggleText{
+  @apply rounded-t-md text-red-500;
+}
