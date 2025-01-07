@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBindingModule } from './data-binding/data-binding.module';
+import { DiretivasModule } from './diretivas/diretivas.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { DataBindingModule } from './data-binding/data-binding.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DataBindingModule
+    DataBindingModule,
+    DiretivasModule
   ],
   providers: [],
   bootstrap: [AppComponent]

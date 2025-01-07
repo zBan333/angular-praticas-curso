@@ -1,0 +1,91 @@
+<div class="container flex flex-col gap-2 mx-auto mb-5">
+  <h2 class="flex justify-start text-lg font-medium lg:text-2xl md:text-xl">
+    Diretiva ngIF
+  </h2>
+  <div class="container w-full gap-3 mb-4 lg:px-20 md:gap-5 lg:gap-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:gap-15 md:gap-12 lg:place-items-center sm:gap-5">
+
+      <div class="flex flex-col items-center gap-3 md:gap-5 lg:gap-12 lg:w-96 md:w-full">
+        <div class="w-full lg:w-96">
+          <h4 class="text-lg font-medium lg:text-xl">
+           Trocando a cor da fonte
+          </h4>
+          <div class="w-full h-24 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+            <p [class.toggleText]="isRed"
+               class="flex items-center justify-center w-full h-12 text-lg font-semibold">
+              Esse Texto muda de cor
+            </p>
+            <button (click)="mudarCor()"
+                    class="w-full h-12 text-base font-medium rounded-b-lg bg-grayCustom-200 ">
+              mudar a cor
+            </button>
+          </div>
+        </div>
+        <div class="w-full lg:w-96">
+          <h4 class="text-lg font-medium lg:text-xl">
+           Aumentando fonte
+          </h4>
+          <div class="w-full border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+            <p [style.fontSize.px]="fontSize"
+               class="flex items-center justify-center w-full h-12 font-semibold">
+              Fonte dinamica
+            </p>
+            <div class="grid w-full grid-cols-2 gap-1 p-1 border-t-2 border-solid border-grayCustom-200">
+              <button (click)="aumentarFonte()"
+                      class="w-full transition-all duration-200 rounded h-11 bg-grayCustom-200 hover:bg-grayCustom-300 active:bg-grayCustom-400">
+                Aumentar
+              </button>
+              <button (click)="diminuirFonte()"
+                      class="w-full transition-all duration-200 rounded h-11 bg-grayCustom-200 hover:bg-grayCustom-300 active:bg-grayCustom-400">
+                Diminuir
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center gap-3 md:gap-5 lg:gap-12 lg:w-96">
+        <div class="w-full lg:w-96">
+          <h4 class="text-lg font-medium lg:text-xl">
+           classes dinamicas
+          </h4>
+          <div class="w-full p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+            <p [style.background-color]="isHighLight ? 'yellow' : 'transparent' "
+               class="flex items-center justify-center w-full h-12 text-xl font-semibold ">
+              Texto com destaque
+            </p>
+            <button (click)="mudarDestaque()"
+                    class="w-full transition-all duration-150 bg-grayCustom-200 h-11 rounded-b-md hover:bg-grayCustom-300 active:bg-grayCustom-400">
+              Mudar destaque
+            </button>
+          </div>
+        </div>
+        <div class="w-full lg:w-96">
+          <h4 class="text-lg font-medium lg:text-xl">
+            Mudar cor de fundo
+            <div class="w-full p-1 border-2 border-solid rounded-lg shadow-lg border-grayCustom-200">
+              <div [style.backgroundColor]="bgColor"
+                   class="w-full h-12 p-1 border-b-2 border-gray-200 border-solid rounded-t">
+              </div>
+              <div class="grid w-full grid-cols-3 gap-1 p-1 ">
+                <button (click)="mudarBgColor('red')"
+                        class="w-full font-normal transition-all duration-150 rounded bg-grayCustom-200 h-11 hover:bg-grayCustom-300 active:bg-grayCustom-400">
+                  Vermelho
+                </button>
+                <button (click)="mudarBgColor('blue')"
+                        class="w-full font-normal transition-all duration-150 rounded bg-grayCustom-200 h-11 hover:bg-grayCustom-300 active:bg-grayCustom-400">
+                  Azul
+                </button>
+                <button (click)="mudarBgColor('green')"
+                        class="w-full font-normal transition-all duration-150 rounded bg-grayCustom-200 h-11 hover:bg-grayCustom-300 active:bg-grayCustom-400">
+                  Verde
+                </button>
+              </div>
+            </div>
+          </h4>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

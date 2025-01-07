@@ -1,0 +1,62 @@
+<div class="container flex flex-col gap-2 mx-auto mb-5">
+  <h2 class="flex justify-start text-lg font-medium lg:text-2xl md:text-xl">
+    Input Property
+  </h2>
+
+  <div class="container w-full gap-3 mb-4 lg:px-20 md:gap-5 lg:gap-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:gap-15 md:gap-12 lg:place-items-center sm:gap-5">
+
+      <div class="flex flex-col items-center gap-3 md:gap-5 lg:gap-12 lg:w-96 md:w-full">
+        <div class="w-full lg:w-96">
+          <h4 class="text-lg font-medium lg:text-xl">
+            Texto com input Property
+          </h4>
+          <div class="flex items-center w-full h-24 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+            <app-text-display [text]="'Texto com input property'"
+              class="flex items-center justify-center w-full h-24">
+            </app-text-display>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-96">
+          <h4 class="text-lg font-medium lg:text-xl">
+            Alterando background
+          </h4>
+          <div class="flex flex-col w-full h-24 gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+            <div class="w-full h-12 rounded">
+              <app-background [background]="'blue'"></app-background>
+            </div>
+            <div class="w-full h-12 rounded">
+              <app-background [background]="'green'"></app-background>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center gap-3 md:gap-5 lg:gap-12 lg:w-96 md:w-full">
+        <div class="w-full lg:w-96">
+          <h4 class="text-lg font-medium lg:text-xl">
+            Exibindo Lista de Itens
+          </h4>
+          <div class="w-full border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+            <app-item-list [items]="['Item 1','Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6']">
+            </app-item-list>
+          </div>
+        </div>
+        <div class="w-full lg:w-96">
+          <h4 class="text-lg font-medium lg:text-xl">
+            Controlando Visibilidade
+          </h4>
+          <div class="w-full p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+            <p class="flex flex-col gap-1">
+                <app-conteudo-visivel [visivel]="true" class="flex items-center justify-center w-full h-12 rounded bg-grayCustom-200">
+                </app-conteudo-visivel>
+                <app-conteudo-visivel [visivel]="false" class="flex items-center justify-center w-full h-12 rounded bg-grayCustom-200">
+                </app-conteudo-visivel>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
