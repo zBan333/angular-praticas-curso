@@ -8,31 +8,29 @@ import { Component } from '@angular/core';
   styleUrl: './diretiva-ngif.component.css'
 })
 export class DiretivaNgifComponent {
-  isRed: boolean = false;
+  showText: boolean = false;
 
-  fontSize: number = 16;
+  showInput: boolean = false;
 
-  isHighLight: boolean = false;
+  showChild: boolean = false;
 
-  bgColor: string = 'white';
+  showInfo: boolean = false;
+  showBlock: boolean = true;
 
-  mudarCor() {
-    this.isRed = !this.isRed;
+  toggleText(){
+    this.showText = !this.showText;
   }
 
-  aumentarFonte() {
-    this.fontSize++;
+  toggleInput(){
+    this.showInput = !this.showInput;
   }
 
-  diminuirFonte() {
-    this.fontSize--;
+  toggleChild(){
+    this.showChild = !this.showChild;
   }
 
-  mudarDestaque() {
-    this.isHighLight = !this.isHighLight;
-  }
-
-  mudarBgColor(color: string) {
-    this.bgColor = color;
+  toggleInfo(){
+    this.showInfo = !this.showInfo;
+    this.showBlock = !this.showBlock;
   }
 }
