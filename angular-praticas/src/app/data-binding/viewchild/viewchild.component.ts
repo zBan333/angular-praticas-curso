@@ -29,7 +29,6 @@ export class ViewchildComponent {
   }
 
   ngAfterViewInit() {
-    this.inputFocus.nativeElement.focus();
     this.tituloFilho = this.componentFilho.title;
   }
 }
