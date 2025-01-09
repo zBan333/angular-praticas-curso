@@ -10,4 +10,6 @@ export class AppComponent {
   title = 'Minha praticas com angular';
 
   componentActive: string = '';
+
+  trianguleImage: string = 'https://www.iconpacks.net/icons/1/free-error-icon-905-thumb.png';
 }

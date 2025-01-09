@@ -26,8 +26,9 @@
           <div class="container mx-auto" id="diretivas-context" *ngSwitchCase="'diretivas'">
             <app-diretivas></app-diretivas>
           </div>
-          <div *ngSwitchDefault >
-            <h1 class="container flex items-center justify-center mx-auto text-lg font-semibold lg:text-2xl md:text-xl h-96">
+          <div *ngSwitchDefault class="container flex flex-col items-center justify-center w-full gap-3 mx-auto h-96">
+            <img [src]="trianguleImage" alt="" class="w-64 h-64">
+            <h1 class="container flex items-center justify-center mx-auto text-lg font-semibold lg:text-2xl md:text-xl ">
               Nenhum conteudo selecionado
             </h1>
           </div>
