@@ -1,41 +1,125 @@
-<div class="h-screen p-1 lg:p-4 bg-wild-sand-100">
-  <div class="p-4 mb-2 shadow-xl bg-stone-50 rounded-2xl">
+<div class="flex flex-col h-screen gap-3 p-1 lg:p-4 bg-wild-sand-50">
+  <div class="p-4 shadow-xl bg-stone-50 rounded-2xl">
     <h1 class="flex items-center justify-center text-2xl font-medium text-center lg:text-4xl md:text-3xl">
       {{ title }}
     </h1>
   </div>
-  <div class="flex flex-col w-full p-3 shadow-xl bg-stone-50 rounded-2xl">
-        <div class="container flex flex-wrap gap-3 p-1 mx-auto mb-3">
-          <h2 class="nav-titulo">Conteudos: </h2>
-          <button class="nav-button"
-            [class.active]="componentActive == 'data-binding'"
-            (click)="componentActive = 'data-binding'">
-            data-binding
-          </button>
-          <button class="nav-button"
-          [class.active]="componentActive == 'diretivas'"
-            (click)="componentActive = 'diretivas'">
-            diretivas
-          </button>
-        </div>
+  <div class="grid lg:grid-cols-[250px_1fr] w-full items-start xl:gap-10 lg:ga-p8 md:gap-6 sm:gap-4 gap-2">
+    <div class="container flex flex-col items-start p-2 mx-auto shadow-xl bg-white rounded-2xl lg:h-[795px]">
+      <h2 class="text-lg font-medium nav-titulo lg:text-xl">Conteudos: </h2>
+      <div class="hidden w-full px-4 lg:flex lg:flex-col md:gap-3">
+        <button class="nav-button"
+          [class.active]="componentActive == 'data-binding'"
+          (click)="componentActive = 'data-binding'">
+          Data-binding
+        </button>
+        <button class="nav-button"
+        [class.active]="componentActive == 'diretivas'"
+          (click)="componentActive = 'diretivas'">
+          Diretivas
+        </button>
+        <button class="nav-button"
+        [class.active]="componentActive == 'servico'"
+          (click)="componentActive = 'servico'">
+          Serviços
+        </button>
+        <button class="nav-button"
+        [class.active]="componentActive == 'pipes'"
+          (click)="componentActive = 'pipes'">
+          Pipes
+        </button>
+        <button class="nav-button"
+        [class.active]="componentActive == 'rotas'"
+          (click)="componentActive = 'rotas'">
+          Rotas
+        </button>
+        <button class="nav-button"
+        [class.active]="componentActive == 'forms'"
+          (click)="componentActive = 'rotas'">
+          Template Driven
+        </button>
+        <button class="nav-button"
+        [class.active]="componentActive == 'reactForms'"
+          (click)="componentActive = 'rotas'">
+          Data-driven
+        </button>
+        <button class="nav-button"
+        [class.active]="componentActive == 'http'"
+          (click)="componentActive = 'http'">
+          Http
+        </button>
+      </div>
+    </div>
 
-        <div class="container mx-auto" [ngSwitch]="componentActive">
-          <div class="container mx-auto" id="data-binding-context" *ngSwitchCase="'data-binding'">
-            <app-data-binding></app-data-binding>
-          </div>
-          <div class="container mx-auto" id="diretivas-context" *ngSwitchCase="'diretivas'">
-            <app-diretivas></app-diretivas>
-          </div>
-          <div *ngSwitchDefault class="container flex flex-col items-center justify-center w-full gap-3 mx-auto h-96">
-            <img [src]="trianguleImage" alt="" class="w-64 h-64">
-            <h1 class="container flex items-center justify-center mx-auto text-lg font-semibold lg:text-2xl md:text-xl ">
-              Nenhum conteudo selecionado
-            </h1>
-          </div>
-        </div>
+    <div class="container p-10 mx-auto shadow-xl rounded-2xl  h-[795px] overflow-auto no-scrollbar bg-white" [ngSwitch]="componentActive">
+      <div class="container mx-auto" id="data-binding-context" *ngSwitchCase="'data-binding'">
+        <app-data-binding></app-data-binding>
+      </div>
+
+      <div class="container mx-auto" id="diretivas-context" *ngSwitchCase="'diretivas'">
+        <app-diretivas></app-diretivas>
+      </div>
+
+      <div class="container w-full h-full mx-auto" *ngSwitchCase="'servico'">
+       <div class="container flex flex-col items-center justify-center w-full h-full gap-3 mx-auto" id="paginaNaoEncontrada-apagar">
+        <img [src]="trianguleImage" alt="" class="w-64 h-64">
+        <h1 class="container flex items-center justify-center mx-auto text-lg font-semibold lg:text-2xl md:text-xl ">
+         Página não encontrada
+        </h1>
+       </div>
+      </div>
+
+      <div class="container w-full h-full mx-auto" *ngSwitchCase="'pipes'">
+       <div class="container flex flex-col items-center justify-center w-full h-full gap-3 mx-auto" id="paginaNaoEncontrada-apagar">
+        <img [src]="trianguleImage" alt="" class="w-64 h-64">
+        <h1 class="container flex items-center justify-center mx-auto text-lg font-semibold lg:text-2xl md:text-xl ">
+         Página não encontrada
+        </h1>
+       </div>
+      </div>
+
+      <div class="container w-full h-full mx-auto" *ngSwitchCase="'rotas'">
+       <div class="container flex flex-col items-center justify-center w-full h-full gap-3 mx-auto" id="paginaNaoEncontrada-apagar">
+        <img [src]="trianguleImage" alt="" class="w-64 h-64">
+        <h1 class="container flex items-center justify-center mx-auto text-lg font-semibold lg:text-2xl md:text-xl ">
+         Página não encontrada
+        </h1>
+       </div>
+      </div>
+
+      <div class="container w-full h-full mx-auto" *ngSwitchCase="'forms'">
+       <div class="container flex flex-col items-center justify-center w-full h-full gap-3 mx-auto" id="paginaNaoEncontrada-apagar">
+        <img [src]="trianguleImage" alt="" class="w-64 h-64">
+        <h1 class="container flex items-center justify-center mx-auto text-lg font-semibold lg:text-2xl md:text-xl ">
+         Página não encontrada
+        </h1>
+       </div>
+      </div>
+
+      <div class="container w-full h-full mx-auto" *ngSwitchCase="'reactForms'">
+       <div class="container flex flex-col items-center justify-center w-full h-full gap-3 mx-auto" id="paginaNaoEncontrada-apagar">
+        <img [src]="trianguleImage" alt="" class="w-64 h-64">
+        <h1 class="container flex items-center justify-center mx-auto text-lg font-semibold lg:text-2xl md:text-xl ">
+         Página não encontrada
+        </h1>
+       </div>
+      </div>
+
+      <div class="container w-full h-full mx-auto" *ngSwitchCase="'http'">
+       <div class="container flex flex-col items-center justify-center w-full h-full gap-3 mx-auto" id="paginaNaoEncontrada-apagar">
+        <img [src]="trianguleImage" alt="" class="w-64 h-64">
+        <h1 class="container flex items-center justify-center mx-auto text-lg font-semibold lg:text-2xl md:text-xl ">
+         Página não encontrada
+        </h1>
+       </div>
+      </div>
 
 
-
-
+      <div *ngSwitchDefault class="container flex flex-col items-center justify-center w-full h-full gap-3 mx-auto">
+        <h1 class="container flex items-center justify-center mx-auto text-lg font-semibold lg:text-2xl md:text-xl ">
+          Nenhum conteudo selecionado
+        </h1>
+      </div>
+    </div>
   </div>
 </div>

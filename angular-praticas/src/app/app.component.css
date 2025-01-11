@@ -1,8 +1,19 @@
 .nav-button {
-  @apply px-3 py-2 text-lg font-medium transition-all duration-75 border-2 border-solid rounded-lg cursor-pointer border-grayCustom-200 hover:shadow-md active:bg-grayCustom-200 active:shadow-lg;
+  @apply w-full px-3 py-2 text-lg font-medium transition-all duration-75 border-2 border-solid rounded-lg cursor-pointer border-grayCustom-200 hover:shadow-md active:bg-grayCustom-200 active:shadow-lg;
 }
 
 .nav-titulo {
   @apply flex items-center justify-center px-3 py-2 text-xl font-medium ;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+
+
+
 
