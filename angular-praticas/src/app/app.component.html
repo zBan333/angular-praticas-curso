@@ -5,8 +5,15 @@
     </h1>
   </div>
   <div class="grid lg:grid-cols-[250px_1fr] w-full items-start xl:gap-10 lg:ga-p8 md:gap-6 sm:gap-4 gap-2">
-    <div class="container flex flex-col items-start p-2 mx-auto shadow-xl bg-white rounded-2xl lg:h-[795px]">
+    <div class="container flex items-center w-full p-2 mx-auto bg-white shadow-xl max-lg:justify-between lg:flex-col lg:items-start rounded-2xl lg:h-[795px]">
+
       <h2 class="text-lg font-medium nav-titulo lg:text-xl">Conteudos: </h2>
+      <button
+      class="flex px-3 text-3xl transition-all duration-75 lg:hidden hover:scale-110"
+      (click)="drawerMenuOpen = ! drawerMenuOpen">
+      ☰
+    </button>
+
       <div class="hidden w-full px-4 lg:flex lg:flex-col md:gap-3">
         <button class="nav-button"
           [class.active]="componentActive == 'data-binding'"
@@ -51,7 +58,51 @@
       </div>
     </div>
 
-    <div class="container p-10 mx-auto shadow-xl rounded-2xl  h-[795px] overflow-auto no-scrollbar bg-white" [ngSwitch]="componentActive">
+    <div
+      class="fixed top-0 left-0 z-50 p-4 transition-transform duration-300 transform bg-white  shadow-xl h-dvh lg:hidden w-[250px] max-sm:w-full"
+      [class.translate-x-0]="drawerMenuOpen"
+      [class.-translate-x-full]="!drawerMenuOpen">
+
+      <nav class="flex flex-col justify-between w-full gap-3 mt-4">
+        <button class="nav-button" [class.active]="componentActive == 'data-binding'" (click)="componentActive = 'data-binding'; drawerMenuOpen = false">
+          Data-binding
+        </button>
+        <button class="nav-button" [class.active]="componentActive == 'diretivas'" (click)="componentActive = 'diretivas'; drawerMenuOpen = false">
+          Diretivas
+        </button>
+        <button class="nav-button" [class.active]="componentActive == 'servico'" (click)="componentActive = 'servico'; drawerMenuOpen = false">
+          Serviços
+        </button>
+        <button class="nav-button" [class.active]="componentActive == 'pipes'"
+          (click)="componentActive = 'pipes'; drawerMenuOpen = false">
+          Pipes
+        </button>
+        <button class="nav-button"[class.active]="componentActive == 'rotas'"
+          (click)="componentActive = 'rotas'; drawerMenuOpen = false">
+          Rotas
+        </button>
+        <button class="nav-button" [class.active]="componentActive == 'forms'"
+          (click)="componentActive = 'rotas' ; drawerMenuOpen = false">
+          Template Driven
+        </button>
+        <button class="nav-button" [class.active]="componentActive == 'reactForms'"
+          (click)="componentActive = 'rotas' ; drawerMenuOpen = false">
+          Data-driven
+        </button>
+        <button class="nav-button" [class.active]="componentActive == 'http'"
+          (click)="componentActive = 'http' ; drawerMenuOpen = false">
+          Http
+        </button>
+
+        <button
+          class="close-button"
+          (click)="drawerMenuOpen = false">
+          Fechar
+        </button>
+      </nav>
+    </div>
+
+    <div class="container p-2 mx-auto overflow-auto bg-white shadow-xl xl:p-10 lg:p-8 md:p-6 sm:p-4 rounded-2xl no-scrollbar h-[795px]" [ngSwitch]="componentActive">
       <div class="container mx-auto" id="data-binding-context" *ngSwitchCase="'data-binding'">
         <app-data-binding></app-data-binding>
       </div>
@@ -116,7 +167,7 @@
 
 
       <div *ngSwitchDefault class="container flex flex-col items-center justify-center w-full h-full gap-3 mx-auto">
-        <h1 class="container flex items-center justify-center mx-auto text-lg font-semibold lg:text-2xl md:text-xl ">
+        <h1 class="container flex items-center justify-center mx-auto text-xl font-semibold lg:text-2xl ">
           Nenhum conteudo selecionado
         </h1>
       </div>
