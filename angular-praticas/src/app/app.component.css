@@ -1,5 +1,5 @@
 .nav-button {
-  @apply w-full py-1 text-lg font-medium transition-all duration-75 border-2 border-solid rounded-lg cursor-pointer border-grayCustom-200 hover:shadow-md active:bg-grayCustom-200 active:shadow-lg;
+  @apply flex justify-start w-full px-2 py-1 text-lg transition-all duration-75 rounded cursor-pointer hover:font-medium hover:shadow hover:bg-grayCustom-100 active:bg-grayCustom-200;
 }
 
 .close-button {
