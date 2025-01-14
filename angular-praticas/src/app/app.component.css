@@ -1,9 +1,9 @@
 .nav-button {
-  @apply w-full px-3 py-2 text-lg font-medium transition-all duration-75 border-2 border-solid rounded-lg cursor-pointer border-grayCustom-200 hover:shadow-md active:bg-grayCustom-200 active:shadow-lg;
+  @apply w-full py-1 text-lg font-medium transition-all duration-75 border-2 border-solid rounded-lg cursor-pointer border-grayCustom-200 hover:shadow-md active:bg-grayCustom-200 active:shadow-lg;
 }
 
 .close-button {
-  @apply w-full px-3 py-2 text-lg font-medium transition-all duration-75  rounded-lg cursor-pointer bg-grayCustom-200 shadow-md hover:bg-grayCustom-300 active:bg-grayCustom-400 active:shadow-lg;
+  @apply w-full px-3 py-2 text-lg font-medium transition-all duration-75 rounded-lg shadow-md cursor-pointer bg-grayCustom-200 hover:bg-grayCustom-300 active:bg-grayCustom-400 active:shadow-lg;
 }
 
 .nav-titulo {
@@ -18,11 +18,11 @@
 }
 
 .fa-bars {
-  @apply text-3xl px-3;
+  @apply px-3 text-3xl;
 }
 
 .fa-bars:hover {
-  @apply scale-110 transition-all duration-75;
+  @apply transition-all duration-75 scale-110;
 }
 
 .drawerMenu {

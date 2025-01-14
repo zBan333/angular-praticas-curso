@@ -6,15 +6,13 @@
   </div>
   <div class="grid lg:grid-cols-[250px_1fr] w-full items-start xl:gap-10 lg:ga-p8 md:gap-6 sm:gap-4 gap-2">
     <div class="container flex items-center w-full p-2 mx-auto bg-white shadow-xl max-lg:justify-between lg:flex-col lg:items-start rounded-2xl lg:h-[795px]">
-
       <h2 class="text-lg font-medium nav-titulo lg:text-xl">Conteudos: </h2>
-      <button
-      class="flex px-3 text-3xl transition-all duration-75 lg:hidden hover:scale-110"
-      (click)="drawerMenuOpen = ! drawerMenuOpen">
-      ☰
-    </button>
+      <button class="flex px-3 text-3xl transition-all duration-75 lg:hidden hover:scale-110"
+        (click)="drawerMenuOpen = ! drawerMenuOpen">
+        ☰
+      </button>
 
-      <div class="hidden w-full px-4 lg:flex lg:flex-col md:gap-3">
+      <div class="hidden w-full gap-1 px-4 lg:flex lg:flex-col">
         <button class="nav-button"
           [class.active]="componentActive == 'data-binding'"
           (click)="componentActive = 'data-binding'">
@@ -63,7 +61,7 @@
       [class.translate-x-0]="drawerMenuOpen"
       [class.-translate-x-full]="!drawerMenuOpen">
 
-      <nav class="flex flex-col justify-between w-full gap-3 mt-4">
+      <nav class="flex flex-col justify-between w-full gap-1 mt-4">
         <button class="nav-button" [class.active]="componentActive == 'data-binding'" (click)="componentActive = 'data-binding'; drawerMenuOpen = false">
           Data-binding
         </button>
