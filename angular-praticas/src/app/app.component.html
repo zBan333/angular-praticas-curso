@@ -105,7 +105,7 @@
         <app-data-binding></app-data-binding>
       </div>
 
-      <div class="container mx-auto" id="diretivas-context" *ngSwitchCase="'diretivas'">
+      <div class="container mx-auto" id="diretivas-context" *ngSwitchDefault >
         <app-diretivas></app-diretivas>
       </div>
 
@@ -164,7 +164,7 @@
       </div>
 
 
-      <div *ngSwitchDefault class="container flex flex-col items-center justify-center w-full h-full gap-3 mx-auto">
+      <div *ngSwitchCase="'diretivas'" class="container flex flex-col items-center justify-center w-full h-full gap-3 mx-auto">
         <h1 class="container flex flex-col items-center justify-center gap-4 mx-auto">
           <span class="text-xl font-semibold text-center lg:text-2xl">Seja Bem vindo ao meu site sobre minhas praticas do angular</span>
           <br>
