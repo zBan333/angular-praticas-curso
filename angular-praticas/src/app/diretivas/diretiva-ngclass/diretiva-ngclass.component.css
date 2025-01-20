@@ -1,0 +1,16 @@
+.low-number {
+  @apply text-blue-600 bg-blue-200;
+}
+
+.medium-number {
+  @apply text-orange-600 bg-orange-200;
+}
+
+.high-number {
+  @apply text-red-600 bg-red-200;
+}
+
+.selected {
+  @apply font-medium text-blue-500 bg-blue-100;
+}
+
