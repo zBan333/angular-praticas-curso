@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './diretiva-ngclass.component.css'
 })
 export class DiretivaNgclassComponent {
+
   isRed: boolean = false;
 
   number: number = 5;

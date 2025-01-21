@@ -1,5 +1,9 @@
 .nav-button {
-  @apply flex justify-start w-full px-2 py-1 text-lg transition-all duration-75 rounded cursor-pointer hover:font-medium hover:shadow hover:bg-grayCustom-100 active:bg-grayCustom-200;
+  @apply flex justify-start w-full px-2 py-1 transition-all duration-75 rounded cursor-pointer hover:shadow hover:bg-grayCustom-100 text-lg
+}
+
+.nav-button.active {
+  @apply text-lg shadow bg-grayCustom-200;
 }
 
 .close-button {
@@ -7,7 +11,7 @@
 }
 
 .nav-titulo {
-  @apply flex items-center justify-center px-3 py-2 text-xl font-medium ;
+  @apply flex items-center justify-start px-3 py-2 text-xl font-medium ;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -25,9 +29,6 @@
   @apply transition-all duration-75 scale-110;
 }
 
-.drawerMenu {
-  @apply bg-red-500
-}
 
 
 

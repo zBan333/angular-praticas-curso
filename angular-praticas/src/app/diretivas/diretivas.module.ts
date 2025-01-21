@@ -10,6 +10,7 @@ import { Switch02Component } from './diretiva-switch/switch02/switch02.component
 import { Switch03Component } from './diretiva-switch/switch03/switch03.component';
 import { DiretivaNgforComponent } from './diretiva-ngfor/diretiva-ngfor.component';
 import { DiretivaNgclassComponent } from './diretiva-ngclass/diretiva-ngclass.component';
+import { DiretivaNgstyleComponent } from './diretiva-ngstyle/diretiva-ngstyle.component';
 
 
 
@@ -23,7 +24,8 @@ import { DiretivaNgclassComponent } from './diretiva-ngclass/diretiva-ngclass.co
     Switch02Component,
     Switch03Component,
     DiretivaNgforComponent,
-    DiretivaNgclassComponent
+    DiretivaNgclassComponent,
+    DiretivaNgstyleComponent
   ],
   imports: [
     CommonModule,
