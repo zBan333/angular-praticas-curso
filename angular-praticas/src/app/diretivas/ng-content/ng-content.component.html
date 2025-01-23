@@ -1,0 +1,64 @@
+<div class="container flex flex-col gap-2 mx-auto mb-5">
+  <h2 class="flex justify-start text-lg font-medium lg:text-2xl md:text-xl">
+    ng-content
+  </h2>
+  <div class="container w-full gap-3 mb-4 2xl:px-20 md:gap-5 lg:gap-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:gap-16 md:gap-12 lg:place-items-center sm:gap-5">
+      <div class="flex flex-col items-start gap-3 xl:items-center md:gap-5 lg:gap-12 xl:w-96 md:w-full">
+        <div class="w-full 2xl:w-96">
+          <h4 class="text-lg font-medium lg:text-xl">
+            Texto dinamico
+          </h4>
+          <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+            <app-container>
+              <p>Este texto é inserido usando ng-content</p>
+            </app-container>
+          </div>
+        </div>
+        <div class="w-full 2xl:w-96">
+          <h4 class="text-lg font-medium lg:text-xl">
+            Usando multiplos slots
+          </h4>
+          <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+            <app-card>
+              <div header class="font-medium ">Header</div>
+              <div sidebar>aside</div>
+              <div main>main</div>
+            </app-card>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-start gap-3 xl:items-center md:gap-5 lg:gap-12 xl:w-96 md:w-full">
+        <div class="w-full 2xl:w-96">
+          <h4 class="text-lg font-medium lg:text-xl">
+            conteudo dinamico
+          </h4>
+          <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+            <app-box>
+              <p class="text-red-500">Texto com estilo personalizado</p>
+            </app-box>
+          </div>
+        </div>
+        <div class="w-full 2xl:w-96">
+          <h4 class="text-lg font-medium lg:text-xl">
+            ng-content com lista
+          </h4>
+          <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+            <app-list>
+              <li class="flex items-center justify-center h-24 rounded bg-grayCustom-100 hover:bg-grayCustom-200">
+              item 01
+              </li>
+              <li class="flex items-center justify-center h-24 rounded bg-grayCustom-100 hover:bg-grayCustom-200">
+                item 02
+              </li>
+              <li class="flex items-center justify-center h-24 rounded bg-grayCustom-100 hover:bg-grayCustom-200">
+                item 03
+              </li>
+            </app-list>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

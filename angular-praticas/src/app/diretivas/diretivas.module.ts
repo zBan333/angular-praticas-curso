@@ -12,6 +12,11 @@ import { DiretivaNgforComponent } from './diretiva-ngfor/diretiva-ngfor.componen
 import { DiretivaNgclassComponent } from './diretiva-ngclass/diretiva-ngclass.component';
 import { DiretivaNgstyleComponent } from './diretiva-ngstyle/diretiva-ngstyle.component';
 import { OperadorElvisComponent } from './operador-elvis/operador-elvis.component';
+import { NgContentComponent } from './ng-content/ng-content.component';
+import { ContainerComponent } from './ng-content/container/container.component';
+import { CardComponent } from './ng-content/card/card.component';
+import { BoxComponent } from './ng-content/box/box.component';
+import { ListComponent } from './ng-content/list/list.component';
 
 
 
@@ -27,7 +32,12 @@ import { OperadorElvisComponent } from './operador-elvis/operador-elvis.componen
     DiretivaNgforComponent,
     DiretivaNgclassComponent,
     DiretivaNgstyleComponent,
-    OperadorElvisComponent
+    OperadorElvisComponent,
+    NgContentComponent,
+    ContainerComponent,
+    CardComponent,
+    BoxComponent,
+    ListComponent
   ],
   imports: [
     CommonModule,

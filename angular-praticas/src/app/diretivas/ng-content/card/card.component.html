@@ -1,0 +1,13 @@
+<div class="p-1">
+  <div class="flex items-center justify-center w-full h-6 border-b-2 border-solid border-grayCustom-200">
+    <ng-content select="[header]"></ng-content>
+  </div>
+  <div class="grid grid-cols-[100px_1fr] gap-1 p-1">
+    <div class="flex items-center justify-center w-full border-r-2 border-solid h-14 border-grayCustom-200">
+      <ng-content select="[sidebar]"></ng-content>
+    </div>
+    <div class="flex items-center justify-center w-full h-14">
+      <ng-content select="[main]"></ng-content>
+    </div>
+  </div>
+</div>
