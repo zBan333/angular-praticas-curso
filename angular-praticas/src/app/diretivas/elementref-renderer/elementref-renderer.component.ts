@@ -15,7 +15,7 @@ export class ElementrefRendererComponent implements AfterViewInit {
   ){ }
 
   ngAfterViewInit(): void {
-    let paragrafo01 = this.ElementRef.nativeElement.querySelector('#paragrafo01');
+    const paragrafo01 = this.ElementRef.nativeElement.querySelector('#paragrafo01');
     this.Renderer2.setStyle(
       paragrafo01,
       'background-color',
@@ -24,10 +24,24 @@ export class ElementrefRendererComponent implements AfterViewInit {
   }
 
   carregarClasse(){
-    let paragrafo02 = this.ElementRef.nativeElement.querySelector('#paragrafo02');
+    const paragrafo02 = this.ElementRef.nativeElement.querySelector('#paragrafo02');
     this.Renderer2.addClass(
       paragrafo02,
       'destaque'
     )
+  }
+
+  adicionarElemento(){
+    const container = this.ElementRef.nativeElement.querySelector('#container');
+    const novoElemento = this.ElementRef.nativeElement.querySelector('#container');
+    this.Renderer2.addClass(novoElemento, 'novo-item');
+    const texto = this.Renderer2.createText('Novo elemento adicionado!');
+    this.Renderer2.appendChild(novoElemento , texto);
+    this.Renderer2.appendChild(container, novoElemento)
+  }
+
+  habilitarBotao() {
+    const button = this.ElementRef.nativeElement.querySelector('button:last-child');
+    this.Renderer2.removeAttribute(button, 'disabled');
   }
 }
