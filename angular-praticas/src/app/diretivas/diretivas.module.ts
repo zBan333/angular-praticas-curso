@@ -17,6 +17,7 @@ import { ContainerComponent } from './ng-content/container/container.component';
 import { CardComponent } from './ng-content/card/card.component';
 import { BoxComponent } from './ng-content/box/box.component';
 import { ListComponent } from './ng-content/list/list.component';
+import { ElementrefRendererComponent } from './elementref-renderer/elementref-renderer.component';
 
 
 
@@ -37,7 +38,8 @@ import { ListComponent } from './ng-content/list/list.component';
     ContainerComponent,
     CardComponent,
     BoxComponent,
-    ListComponent
+    ListComponent,
+    ElementrefRendererComponent
   ],
   imports: [
     CommonModule,

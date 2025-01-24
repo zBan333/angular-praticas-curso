@@ -1,0 +1,3 @@
+.destaque {
+  @apply text-white bg-[#4caf50] rounded
+}

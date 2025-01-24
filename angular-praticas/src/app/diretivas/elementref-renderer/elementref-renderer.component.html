@@ -1,0 +1,39 @@
+<div class="container flex flex-col gap-2 mx-auto mb-5">
+  <h2 class="flex justify-start text-lg font-medium lg:text-2xl md:text-xl">
+    ElementRef e Renderer
+  </h2>
+  <div class="container w-full gap-3 mb-4 2xl:px-20 md:gap-5 lg:gap-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:gap-16 md:gap-12 lg:place-items-center sm:gap-5">
+      <div class="flex flex-col items-start gap-3 xl:items-center md:gap-5 lg:gap-12 xl:w-96 md:w-full">
+        <div class="w-full 2xl:w-96">
+          <h4 class="text-lg font-medium lg:text-xl">
+            Alterar cor de fundo
+          </h4>
+          <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+            <p id="paragrafo01" class="flex items-center justify-center w-full h-24 rounded">
+              Este paragrafo tem sua <br> cor de fundo alterada!
+            </p>
+          </div>
+        </div>
+        <div class="w-full 2xl:w-96">
+          <h4 class="text-lg font-medium lg:text-xl">
+            Adicionar Classe Dinamicamente
+          </h4>
+          <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+            <p id="paragrafo02" class="flex items-center justify-center w-full h-12">
+              Este paragrafo tera estilos apos o click
+            </p>
+            <button class="w-full h-12 text-lg font-medium transition-all duration-150 rounded bg-grayCustom-100 hover:bg-grayCustom-200 active:bg-grayCustom-300"
+            (click)="carregarClasse()">
+              carregar classe
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+    </div>
+  </div>
+</div>
