@@ -39,7 +39,7 @@ import { ElementrefRendererComponent } from './elementref-renderer/elementref-re
     CardComponent,
     BoxComponent,
     ListComponent,
-    ElementrefRendererComponent
+    ElementrefRendererComponent,
   ],
   imports: [
     CommonModule,
